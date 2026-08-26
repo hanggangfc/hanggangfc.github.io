@@ -541,7 +541,69 @@
         align-items: flex-start
       }
     }
-  </style>
+  .trophies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px
+}
+
+.trophy-card {
+  background: linear-gradient(145deg, var(--panel2), var(--panel));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden
+}
+
+.trophy-top {
+  height: 170px;
+  background: linear-gradient(145deg, #182733, #0a131a);
+  position: relative;
+  display: grid;
+  place-items: center
+}
+
+.trophy-year {
+  position: absolute;
+  right: 16px;
+  bottom: -8px;
+  font-family: 'Barlow Condensed';
+  font-size: 92px;
+  line-height: 1;
+  color: rgba(183, 255, 60, .1);
+  font-weight: 900
+}
+
+.trophy-icon {
+  font-size: 62px;
+  filter: drop-shadow(0 0 22px rgba(183, 255, 60, .25))
+}
+
+.trophy-body {
+  padding: 18px 18px 20px
+}
+
+.trophy-status {
+  color: var(--lime);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase
+}
+
+.trophy-name {
+  margin-top: 5px;
+  font-family: 'Barlow Condensed';
+  font-size: 28px;
+  text-transform: uppercase;
+  line-height: 1.05
+}
+
+.trophy-meta {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px
+}
+</style>
 </head>
 
 <body>
@@ -772,7 +834,42 @@
       </div>
     </section>
 
-    <section id="club" class="quote">
+    <section id="trophies">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker">Hall of fame</div>
+        <h2>Trophies & honours</h2>
+      </div>
+      <p>Every badge tells a story. Here's what the Gang has brought home so far.</p>
+    </div>
+    <div class="trophies">
+      <article class="trophy-card">
+        <div class="trophy-top">
+          <div class="trophy-icon">🏆</div>
+          <div class="trophy-year">26</div>
+        </div>
+        <div class="trophy-body">
+          <div class="trophy-status">Champions</div>
+          <div class="trophy-name">NCG Knockout Cup</div>
+          <div class="trophy-meta">2026 • Undefeated final run</div>
+        </div>
+      </article>
+      <article class="trophy-card">
+        <div class="trophy-top">
+          <div class="trophy-icon">🥈</div>
+          <div class="trophy-year">25</div>
+        </div>
+        <div class="trophy-body">
+          <div class="trophy-status">Runners-up</div>
+          <div class="trophy-name">Street Cup Knockout</div>
+          <div class="trophy-meta">2025 • Lost in the final</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="club" class="quote">
       <div class="wrap">
         <div class="quote-box">
           <p>“We don't just show up.<br>We <em>hang together.</em>”<br>- Hang Gang FC</p>
